@@ -11,7 +11,6 @@ Type "copyright", "credits" or "license()" for more information.
 >>> TahunLahir = 1999
 >>> #this command show TahunLahir into a value
 >>> Aku = (TahunLahir, Berat, Tinggi, NIM, Jeneng)
-
 >>> #this command show Aku consist of TahunLahir, Berat, Tinggi, NIM, Jeneng into one line that called Aku as value
 >>> Data = [TahunLahir, Berat, Tinggi, NIM, Jeneng]
 >>>  #this command show Data consist of tahun, berat, tinggi, NIM, Jeneng the samae as Aku and it called a list
@@ -23,7 +22,6 @@ Type "copyright", "credits" or "license()" for more information.
 >>> #this command show the result from slicing Aku in first slice [0] is TahunLahir
 >>> a = NIM % 4; Aku[a]
 100
->>> #this command show that the new data a from the NIM % 4, and Aku[a] be something that merge into one and give the result from Aku[a] is from Slicing in Berat
 >>> #this command show that the new data a from the NIM % 4, and Aku[a] be something that merge into one and give the result from Aku[a] is from Slicing in Berat
 >>> type(Aku[a])
 <class 'int'>
@@ -39,7 +37,12 @@ Traceback (most recent call last):
   File "<pyshell#27>", line 1, in <module>
     Aku[0] = 'ok'
 TypeError: 'tuple' object does not support item assignment
->>> #It cant be changed with that way. it should be something else.			Traceback (most recent call last):							File '<pyshell#26>', line 1, in <module>					 Aku(0) = 'ok'								TypeError: 'tuple' object does not support item assignment			----------------------------------------------------------
+>>> #It cant be changed with that way. it should be something else.		
+#Traceback (most recent call last):							
+  #File '<pyshell#26>', line 1, in <module>				
+    #Aku(0) = 'ok'								
+#TypeError: 'tuple' object does not support item assignment		
+ ----------------------------------------------------------
 >>> type(Data)
 <class 'list'>
 >>> #This command show the type of Data is List which is similar with tuple but the difference is tuple use parenthess(), but list using square brackets[]
