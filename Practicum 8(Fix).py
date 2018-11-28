@@ -1,67 +1,39 @@
 ####Activites 1, Practicum 8, by Donny Rizal 
-Data = {'NIM' : 'L200183161',
-        'Name' : 'Donny Rizal Adhi Pratama',
-        'Address' : 'Rembang',
-        'Zip Code' : '59218',
-        'Job' : 'Student',
-        'Hobby' : 'Nothing',
-        'Skill' : 'Looking for something special',}
-print ("""
+Data = {'N' : 'NIM : L200183161', 'n' : 'Name : Donny Rizal Adhi Pratama','A' : 'Address : Rembang','Z' : 'Zip Code : 59218','J' : 'Job : Student','H' : 'Hobby : Nothing','S' : 'Skill : Looking for something special',}
+b = ("""
 Pilihan yang tersedia:
 b show the help button
 N show your NIM
-a show your name
+n show your name
 A show your address
-K show your zip code
-j show your job
-s show your skill
-h show your hobby
+Z show your zip code
+J show your job
+S show your skill
+H show your hobby
 k to exit""")
+print (b)
 Njir = 0
 while Njir != 'k':
     Njir = input('Your Choice :')
-    if Njir == 'N':
-        print ('Your Name is' , Data['NIM'])
+    if Njir in Data.keys():
+        print (Data[Njir])
     elif Njir == 'b':
-        print ("""
-The available choices:
-b show the help button
-N show your NIM
-a show your name
-A show your address
-K show your zip code
-j show your job
-s show your skill
-h show your hobby
-k to exit""")
-    elif Njir == 'a':
-        print ('Your Name is:' , Data['Name'])
-    elif Njir == 'A':
-        print ('Your Address is in:' , Data['Address'])
-    elif Njir == 'K':
-        print ('Your ZIP Code is:' , Data['Zip Code'])
-    elif Njir == 'j':
-        print ('Your JOB is:' , Data['Job'])
-    elif Njir == 's':
-        print ('Your Skill is:' , Data['Skill'])
-    elif Njir == 'h':
-        print ('Your Hobby is:' , Data['Hobby'])        
-    elif Njir == 'k':
-        print ('This sesion has ended')
+        print (b)
     else:
         print ('Unknown Call Funtion')
+print ('This sesion has ended')
 
 ####Activites 2, Practicum 8, by Donny Rizal  
-##def ConversionTemp(C = 0, F = 0):
-##    'Conversion from Celcius to Fahrenheit'
-##    Temp = 0
-##    if (C == 0) and (F == 0):
-##        print ("Temp 0 Celcius is equal to 32 Fahrenheit")
-##    elif (C == 0) and (F == 0):
-##        Temp = (F - 32) * 5/9
-##        print ("Temp", F + "Fahrenheit is equal to", int(Temp), "Celcius")
-##    elif (C != 0) and (F == 0):
-##        Temp = (C * 9/5) + 32
-##        print ("Temp", C, "Celcius is equal to", int(Temp), "Fahrenheit")
-        
-
+def ConversionTemp(C = 0, F = 0):
+    'Conversion from Celcius to Fahrenheit'
+    Temp = 0
+    if (C == 0) and (F == 0):
+        print ("Temp 0 Celcius is equal to 32 Fahrenheit")
+    elif (C == 0) and (F != 0):
+        Temp = (F - 32) * 5/9
+        print ("Temp", F, "Fahrenheit is equal to", int(Temp), "Celcius")
+    elif (C != 0) and (F == 0):
+        Temp = (C * 9/5) + 32
+        print ("Temp", C, "Celcius is equal to", int(Temp), "Fahrenheit")
+ConversionTemp(F=50)
+ConversionTemp(C=84)
